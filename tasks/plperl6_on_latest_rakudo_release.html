@@ -1,0 +1,60 @@
+<h1>Task Description</h1>
+
+Make PL/Perl6 (a part of <a href="http://pl.parrot.org">PL/Parrot</a>) work on the latest <a href="http://github.com/rakudo/rakudo">Rakudo Perl 6</a> release.
+
+<h1>Steps To Complete This Task</h1>
+
+Recently, a change in Rakudo Perl 6 and/or Parrot caused PL/Perl6 to start failing some tests. This task to
+identify the problem and fix it. It is probably very little code that needs to change, but finding out what
+the problem is will be challenging.
+
+Currently, when you run the PL/Perl6 test suite on a Rakudo Star release, or the Rakudo master branch, 
+the test suite goes into an infinite loop. More specifically, the PostgreSQL process that the test
+suite spawns starts to take 100% CPU and is eventually killed by the postmaster process, which controls
+all the child PostgreSQL processes.
+
+This task will require identifying exactly which part of the code in
+
+<a href="https://github.com/leto/plparrot/blob/master/plparrot.c">plparrot.c</a>
+
+is causing the behaviour. Most likely, PL/Parrot is getting something from Rakudo which is invalid, and then
+passes it along to PostgreSQL, which doesn't react well.
+
+<ol>
+<li>Create a fork of <a href="https://github.com/leto/plparrot">plparrot.git</a> on <a href="http://github.com">github.com</a></li>
+<li>Read the PL/Parrot <a href="https://github.com/leto/plparrot/blob/master/README">README</a>
+<li>Perform all the necessary code and/or documentation changes</li>
+<li>Build parrot and run it's test suite (make test_plperl6) to verify that things still work</li>
+<li>Create a Github pull request (button on the upper right of your fork) to have your changes incorporated into the master repository</li>
+</ol>
+
+<h1>Benefits</h1> 
+<ol>
+<li>
+This will allow PL/Perl6 to continue to be developed and allow people to write database stored procedures in Perl 6!
+</li>
+</ol>
+
+<h1>Requirements</h1> 
+
+<ol>
+<li> Knowledge of C and printf</li>
+<li> Some knowledge of PIR and Rakudo Perl 6</li>
+<li> Abillity to debug.  </li>
+</ol>
+
+<h1>Additional Links</h1>
+<ul>
+<li>
+<a href="http://trac.parrot.org/parrot/wiki/NewParrotDeveloperGuide">New Parrot Developer Guide</a>
+</li>
+<li>
+<a href="https://github.com/parrot/parrot/blob/master/docs/project/git_workflow.pod">Parrot Git Workflow</a>
+</li>
+<li>
+<a href="http://trac.parrot.org/parrot">Parrot Developer Wiki</a>
+</li>
+<li>
+<a href="http://help.github.com/pull-requests/">Sending Pull Requests</a>
+</li>
+</ul>
