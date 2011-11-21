@@ -1,0 +1,60 @@
+<h1>Task Description</h1>
+<p>
+NaCL Bindings for Parrot Virtual Machine
+</p>
+
+<h1>Steps To Complete This Task</h1>
+
+<ol>
+<li>Create a clone of <a href="https://github.com/letolabs/parrot-libgit2">parrot-libgit2.git</a> on <a href="http://github.com">github.com</a></li>
+<li>Use parrot-libgit2 as a skeleton. parrot-nacl will have a very similar structure to parrot-libgit2, except it is binding to the nacl C library instead of the libgit2 C library. NaCL actually has many fewer functions that libgit2, so it will be a smaller binding.</li>
+<li>The setup.winxed file will be very similar, but information needs to be modified to reference NaCL.</li>
+<li>Implement enough of the bindings such that you can call two different NaCL functions from Winxed and get their return values. </li>
+<li>Tests should be included.</li>
+<li>A new Github repository should be created where this code will live.</li>
+</ol>
+
+<h1>Benefits</h1> 
+<ol>
+<li>
+NaCL is a very new and exciting cryptography library which provides crypto primitives that are very useful
+for doing various kinds of cryptography. Having access to this library from Parrot will allow new and interesting
+cryptography applications to be built on Parrot.
+</li>
+</ol>
+
+<h1>Requirements</h1> 
+<ol>
+<li> Knowledge of Git and build systems, C/C++ </li>
+<li> Ability to learn how to use Winxed (very similar to Javascript) and use a Foreign Function Interface (FFI)  </li>
+</ol>
+
+<h1>Additional Links</h1>
+<ul>
+<li>
+<a href=http://nacl.cace-project.eu/box.html">NaCL</a>
+</li>
+
+<li>
+<a href="http://trac.parrot.org/parrot/wiki/NewParrotDeveloperGuide">New Parrot Developer Guide</a>
+</li>
+<li>
+<a href="http://docs.parrot.org/parrot/latest/html/">Latest Parrot Documentation</a>
+</li>
+<li>
+<a href="https://github.com/parrot/parrot/blob/master/docs/project/git_workflow.pod">Parrot Git Workflow</a>
+</li>
+<li>
+<li>
+<a href="http://coolnamehere.com/geekery/parrot/learn/">Parrot Baby Steps</a>
+</li>
+<li>
+<a href="http://trac.parrot.org/parrot">Parrot Developer Wiki</a>
+</li>
+<li>
+<a href="http://help.github.com/pull-requests/">Sending Pull Requests</a>
+</li>
+<li>
+<a href="http://lists.parrot.org/mailman/listinfo/parrot-dev">Parrot Developer Mailing list</a>
+</li>
+</ul>
