@@ -1,0 +1,3 @@
+# Task ideas
+
+* Mersenne Twister Tests for Rosella
