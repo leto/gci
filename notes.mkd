@@ -1,3 +1,7 @@
-# Task ideas
+# GCI Task ideas
+
+Quick list of ideas not already on the task idea page wiki.
 
 * Mersenne Twister Tests for Rosella
+* AKS algorithm in Parrot using parrot-gmp
+* Get Git object databases working in parrot-libgit2
